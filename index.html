@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Sopan Panchal - QA Engineer Portfolio" name="description"/>
+<title>Sopan Panchal | QA Engineer Portfolio</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<style>
+
+        /* =========================================================
+           PROJECT VIEW TEST SHEET BUTTON
+           ========================================================= */
+
+        .project-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .project-head-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .project-head-actions .sheet-link {
+
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 9px 14px;
+
+            min-width: 126px;
+
+            background: #ffffff;
+
+            color: #16a34a;
+
+            border: 2px dashed #16a34a;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            text-decoration: none;
+
+            overflow: hidden;
+
+            /*
+              Light green moving effect
+            */
+            background-image:
+                linear-gradient(
+                    90deg,
+                    transparent 50%,
+                    rgba(22, 163, 74, 0.06) 50%
+                );
+
+            background-size: 10px 100%;
+
+            animation: sheetDashMove 0.8s linear infinite;
+
+            transition:
+                color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        /*
+           Continuous moving dashed border effect
+        */
+        @keyframes sheetDashMove {
+
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 10px 0;
+            }
+
+        }
+
+
+        /*
+           Hover
+        */
+        .project-head-actions .sheet-link:hover {
+
+            color: #15803d;
+
+            border-color: #15803d;
+
+            transform: translateY(-1px);
+
+        }
+
+
+        /*
+           Hide the old bottom button
+        */
+        .project-main > .sheet-link {
+
+            display: none;
+
+        }
+
+
+        /*
+           Mobile
+        */
+        @media (max-width: 760px) {
+
+            .project-title-row {
+
+                align-items: flex-start;
+
+            }
+
+            .project-head-actions {
+
+                flex-direction: column;
+
+                align-items: flex-end;
+
+                gap: 8px;
+
+            }
+
+            .project-head-actions .sheet-link {
+
+                min-width: 116px;
+
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- =========================================================
+     HEADER
+========================================================= -->
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="#home">
+            Sopan Panchal
+        </a>
+<nav class="nav">
+<a href="#about">
+                About
+            </a>
+<a href="#skills">
+                Skills
+            </a>
+<a href="#projects">
+                Projects
+            </a>
+<a href="#certificates">
+                Certificates
+            </a>
+<a href="#automation">
+                My QA Development
+            </a>
+<a href="#contact">
+                Contact
+            </a>
+</nav>
+</div>
+</header>
+<!-- =========================================================
+     MAIN
+========================================================= -->
+<main>
+<!-- =========================================================
+     HOME / HERO
+========================================================= -->
+<section class="hero" id="home">
+<div class="container hero-grid">
+<!-- PROFILE PHOTO -->
+<div class="hero-photo-col">
+<div class="photo-ring">
+<img alt="Sopan Panchal - QA Engineer" src="images/sopan-profile.png"/>
+</div>
+</div>
+<!-- HERO CONTENT -->
+<div class="hero-content">
+<span class="eyebrow">
+                QA ENGINEER
+            </span>
+<h1>
+                Sopan Panchal
+            </h1>
+<p class="hero-role">
+
+                Manual Tester
+                 · 
+                Salesforce QA
+                 · 
+                Automation Tester
+
+            </p>
+<p class="hero-text">
+
+                QA professional focused on manual testing,
+                Salesforce CRM validation, defect reporting
+                and release quality. I enjoy finding issues
+                early, validating fixes and helping teams
+                deliver reliable software.
+
+            </p>
+<div class="hero-actions">
+
+    <!-- View My Work -->
+    <a class="btn btn-dark" href="#projects">
+        <i class="fa-solid fa-briefcase"></i>
+        View My Work
+    </a>
+
+    <!-- Let's Connect -->
+    <a class="btn btn-light" href="#contact">
+        <i class="fa-solid fa-paper-plane"></i>
+        Let's Connect
+    </a>
+
+    <!-- View Resume -->
+    <a
+    class="btn btn-light resume-btn"
+    href="#resume-viewer"
+    onclick="openResumeViewer(); return false;"
+>
+    <i class="fa-solid fa-file-lines"></i>
+    View Resume ↗
+</a>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+
+        <!-- LinkedIn -->
+        <a
+            href="https://www.linkedin.com/in/sopan-panchal-610170262/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon linkedin-icon"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <!-- GitHub -->
+        <a
+            href="https://github.com/Sopan-Panchal"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon github-icon"
+            aria-label="GitHub"
+            title="GitHub"
+        >
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+    </div>
+
+</div>
+<!-- QUICK FACTS -->
+<div class="quick-facts">
+<span>
+                    6+ Months Experience
+                </span>
+<span>
+                    BCA
+                </span>
+<span>
+                    Ahmedabad
+                </span>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+<section class="section about" id="about">
+<div class="container narrow">
+<span class="eyebrow">
+            ABOUT ME
+        </span>
+<h3>
+            "A good tester doesn't just find bugs — they protect the user's experience."
+        </h3>
+<p>
+
+            I am passionate about Software Testing and enjoy exploring applications, understanding requirements, and thinking beyond the expected flow. I work across the testing lifecycle—from test case preparation and execution to defect reporting, re-testing, and regression validation. 
+            My hands-on experience includes Salesforce CRM, quoting workflows, web applications, API validation, and SQL/database testing. I focus on finding issues early, validating fixes thoroughly, and helping teams deliver reliable, high-quality software.
+        </p>
+</div>
+</section>
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+<section class="section soft" id="skills">
+<div class="container">
+<div class="section-head">
+<div>
+<span class="eyebrow">
+                    TECHNICAL SKILLS
+                </span>
+<h2>
+                    What I Test With
+                </h2>
+</div>
+<p>
+
+                Relevant tools and testing skills shown
+                in a compact, recruiter-friendly format.
+
+            </p>
+</div>
+<div class="skills-grid">
+<!-- MANUAL TESTING -->
+<article class="skill">
+<h3>
+                    Manual Testing
+                </h3>
+<p>
+
+                    Black Box · Functional · Smoke ·
+                    Regression · Re-testing · E2E
+
+                </p>
+</article>
+<!-- SALESFORCE -->
+<article class="skill">
+<h3>
+                    Salesforce QA
+                </h3>
+<p>
+
+                    CRM · Flows · Validation Rules ·
+                    Approval Process · UI · Business Process Validation
+
+                </p>
+</article>
+<!-- API DATABASE -->
+<article class="skill">
+<h3>
+                    API &amp; Database
+                </h3>
+<p>
+
+                    REST API · Postman · SQL ·
+                    Data Validation · Database Testing
+
+                </p>
+</article>
+<!-- AUTOMATION -->
+<article class="skill">
+<h3>
+                    Automation
+                </h3>
+<p>
+
+                    Selenium · Java · WebDriver ·
+                    Locators · Waits · Basic TestNG knowledge
+
+                </p>
+</article>
+<!-- TEST MANAGEMENT -->
+<article class="skill">
+<h3>
+                    Test Management
+                </h3>
+<p>
+
+                    Scenario Preparation · Test Cases ·
+                    Execution · Defect Reporting · Bug Tracking
+
+                </p>
+</article>
+<!-- TOOLS -->
+<article class="skill">
+<h3>
+                    Tools &amp; Process
+                </h3>
+<p>
+
+                    Jira · GitHub · Excel ·
+                    SDLC · STLC · Agile Scrum
+
+                </p>
+</article>
+</div>
+</div>
+</section>
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+<section class="section" id="projects">
+<div class="container">
+<div class="section-head">
+<div>
+<span class="eyebrow">
+                    SELECTED WORK
+                </span>
+<h2>
+                    Projects
+                </h2>
+
+                <!-- <div class="project-stats">
+
+    <div class="project-stat">
+        <strong class="count" data-target="3">0</strong>
+        <span>Projects</span>
+    </div>
+
+    <div class="project-stat">
+        <strong class="count" data-target="326">0</strong>
+        <span>Test Cases</span>
+    </div>
+
+    <div class="project-stat">
+        <strong class="count" data-target="326">0</strong>
+        <span>Bug Reports</span>
+    </div>
+
+    <div class="project-stat">
+        <strong class="count" data-target="3">0</strong>
+        <span>Test Sheets</span>
+    </div>
+
+</div> -->
+</div>
+<p>
+
+                Real project work with direct access
+                to my test evidence sheets.
+
+            </p>
+</div>
+<div class="project-list">
+<!-- =================================================
+                 PROJECT 01
+            ================================================== -->
+<article class="project">
+<div class="project-number">
+                    01
+                </div>
+<div class="project-main">
+<div class="project-title-row">
+<div>
+<h3>
+                                QUOTEFORCE
+                            </h3>
+<p>
+                                Salesforce Native Quoting Application
+                            </p>
+</div>
+<!-- RIGHT SIDE -->
+<div class="project-head-actions">
+<span class="project-type">
+                                Salesforce
+                            </span>
+<a class="sheet-link" href="quoteforce-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                                View Test Sheet ↗
+                            </a>
+</div>
+</div>
+<p>
+
+                        Tested quote creation, pricing,
+                        discounts, taxes, approvals,
+                        PDF generation and Salesforce
+                        business flows.
+
+                    </p>
+<div class="tags">
+<span>
+                            Functional
+                        </span>
+<span>
+                            Regression
+                        </span>
+<span>
+                            Smoke
+                        </span>
+<span>
+                            E2E
+                        </span>
+</div>
+<!-- Old button hidden through CSS -->
+<a class="sheet-link" href="quoteforce-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                        View Test Sheet ↗
+                    </a>
+</div>
+</article>
+<!-- =================================================
+                 PROJECT 02
+            ================================================== -->
+<article class="project">
+<div class="project-number">
+                    02
+                </div>
+<div class="project-main">
+<div class="project-title-row">
+<div>
+<h3>
+                                CONVOFORCE
+                            </h3>
+<p>
+                                Salesforce + WhatsApp Integration
+                            </p>
+</div>
+<div class="project-head-actions">
+<span class="project-type">
+                                Integration
+                            </span>
+<a class="sheet-link" href="convforce-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                                View Test Sheet ↗
+                            </a>
+</div>
+</div>
+<p>
+
+                        Validated integration flows,
+                        data synchronization, messaging
+                        behaviour and negative scenarios.
+
+                    </p>
+<div class="tags">
+<span>
+                            Integration
+                        </span>
+<span>
+                            Functional
+                        </span>
+<span>
+                            Regression
+                        </span>
+</div>
+<a class="sheet-link" href="convforce-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                        View Test Sheet ↗
+                    </a>
+</div>
+</article>
+<!-- =================================================
+                 PROJECT 03
+            ================================================== -->
+<article class="project">
+<div class="project-number">
+                    03
+                </div>
+<div class="project-main">
+<div class="project-title-row">
+<div>
+<h3>
+                                MICROSET
+                            </h3>
+<p>
+                                CRM Sales Automation System
+                            </p>
+</div>
+<div class="project-head-actions">
+<span class="project-type">
+                                CRM
+                            </span>
+<a class="sheet-link" href="microset-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                                View Test Sheet ↗
+                            </a>
+</div>
+</div>
+<p>
+
+                        Tested Leads, Opportunities,
+                        Products, Quotes, Orders, pricing,
+                        GST calculations, approvals and
+                        quote generation.
+
+                    </p>
+<div class="tags">
+<span>
+                            Manual
+                        </span>
+<span>
+                            Regression
+                        </span>
+<span>
+                            UAT
+                        </span>
+<span>
+                            E2E
+                        </span>
+</div>
+<a class="sheet-link" href="microset-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                        View Test Sheet ↗
+                    </a>
+</div>
+</article>
+<!-- =================================================
+                 PROJECT 04
+            ================================================== -->
+<article class="project">
+<div class="project-number">
+                    04
+                </div>
+<div class="project-main">
+<div class="project-title-row">
+<div>
+<h3>
+                                NSIQ WEBSITE
+                            </h3>
+<p>
+                                Corporate Website / Web Application Testing
+                            </p>
+</div>
+<div class="project-head-actions">
+<span class="project-type">
+                                Web Testing
+                            </span>
+<a class="sheet-link" href="nsiq-website-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                                View Test Sheet ↗
+                            </a>
+</div>
+</div>
+<p>
+
+                        Validated pages, forms, navigation,
+                        responsiveness, cross-browser
+                        behaviour and release fixes.
+
+                    </p>
+<div class="tags">
+<span>
+                            Functional
+                        </span>
+<span>
+                            UI
+                        </span>
+<span>
+                            Regression
+                        </span>
+<span>
+                            Cross-Browser
+                        </span>
+</div>
+<a class="sheet-link" href="nsiq-website-test-sheet.html" rel="noopener noreferrer" target="_blank">
+                        View Test Sheet ↗
+                    </a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- =========================================================
+     CERTIFICATES
+========================================================= -->
+<section class="section soft" id="certificates">
+<div class="container">
+<div class="section-head">
+<div>
+<span class="eyebrow">
+                    CERTIFICATIONS
+                </span>
+<h2>
+                    Certificates
+                </h2>
+</div>
+<p>
+                Open one certificate at a time.
+                Manual Testing is shown by default.
+            </p>
+</div>
+<div class="certificate-stack">
+<!-- MANUAL TESTING -->
+<article class="certificate-card open">
+<button aria-expanded="true" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            01
+                        </span>
+<span>
+<strong>
+                                Manual Software Testing + Agile
+                            </strong>
+<small>
+                                Udemy · Manual Testing
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content">
+<div class="certificate-image-box">
+<img alt="Manual Software Testing and Agile certificate" src="certificates/manual-testing-agile-udemy.png"/>
+</div>
+<div class="certificate-info">
+<span class="eyebrow">
+                            DEFAULT OPEN
+                        </span>
+<h3>
+                            Manual Testing + Agile
+                        </h3>
+<p>
+                            Learn Manual Software Testing
+                            + Agile with Jira Tool.
+                        </p>
+<button class="btn btn-dark certificate-open-image" data-src="certificates/manual-testing-agile-udemy.png" data-title="Manual Software Testing + Agile" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+<!-- SQL -->
+<article class="certificate-card">
+<button aria-expanded="false" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            02
+                        </span>
+<span>
+<strong>
+                                SQL (Basic)
+                            </strong>
+<small>
+                                HackerRank · SQL
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content">
+<div class="certificate-image-box">
+<img alt="SQL Basic certificate" src="certificates/sql-basic.jpg"/>
+</div>
+<div class="certificate-info">
+<h3>
+                            SQL Basic
+                        </h3>
+<p>
+                            HackerRank SQL skill certification.
+                        </p>
+<button class="btn btn-dark certificate-open-image" data-src="certificates/sql-basic.jpg" data-title="SQL Basic" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+<!-- SOFTWARE ENGINEER INTERN -->
+<article class="certificate-card">
+<button aria-expanded="false" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            03
+                        </span>
+<span>
+<strong>
+                                Software Engineer Intern
+                            </strong>
+<small>
+                                HackerRank · Role Certification
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content">
+<div class="certificate-image-box">
+<img alt="Software Engineer Intern certificate" src="certificates/software-engineer-intern.jpg"/>
+</div>
+<div class="certificate-info">
+<h3>
+                            Software Engineer Intern
+                        </h3>
+<p>
+                            HackerRank role certification.
+                        </p>
+<button class="btn btn-dark certificate-open-image" data-src="certificates/software-engineer-intern.jpg" data-title="Software Engineer Intern" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+<!-- JAVA SELENIUM -->
+<article class="certificate-card">
+<button aria-expanded="false" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            04
+                        </span>
+<span>
+<strong>
+                                Java Selenium
+                            </strong>
+<small>
+                                TestDome · Java Selenium
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content">
+<div class="certificate-image-box">
+<img alt="Java Selenium certificate" src="certificates/java-selenium.jpg"/>
+</div>
+<div class="certificate-info">
+<h3>
+                            Java Selenium
+                        </h3>
+<p>
+                            TestDome Java Selenium certification · Ranking in the top 25%.
+                            Certificate issued on Sep 14, 2026.
+                        </p>
+<button class="btn btn-dark certificate-open-image" data-src="certificates/java-selenium.jpg" data-title="Java Selenium" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+<!-- JAVA FULL STACK -->
+<article class="certificate-card">
+<button aria-expanded="false" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            05
+                        </span>
+<span>
+<strong>
+                                Java Full Stack Developer
+                            </strong>
+<small>
+                                The Kiran Academy · Pune
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content">
+<div class="certificate-image-box">
+<img alt="Java Full Stack Developer certificate" src="certificates/java-full-stack-developer.jpg"/>
+</div>
+<div class="certificate-info">
+<h3>
+                            Java Full Stack Developer
+                        </h3>
+<p>
+                            Full Stack Development course certificate.
+                        </p>
+<button class="btn btn-dark certificate-open-image" data-src="certificates/java-full-stack-developer.jpg" data-title="Java Full Stack Developer" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+<!-- JAVA BASIC -->
+<article class="certificate-card">
+<button aria-expanded="false" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            06
+                        </span>
+<span>
+<strong>
+                                Java Basic
+                            </strong>
+<small>
+                                HackerRank · Skill Certification
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content compact-cert">
+<div class="pdf-mini">
+<span>
+                            PDF
+                        </span>
+<b>
+                            Java Basic Certificate
+                        </b>
+</div>
+<div class="certificate-info">
+<h3>
+                            Java Basic
+                        </h3>
+<p>
+                            HackerRank Java skill certification.
+                        </p>
+<button class="btn btn-dark certificate-open-pdf" data-src="certificates/java-basic.pdf" data-title="Java Basic" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+<!-- CSS BASIC -->
+<article class="certificate-card">
+<button aria-expanded="false" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            07
+                        </span>
+<span>
+<strong>
+                                CSS Basic
+                            </strong>
+<small>
+                                HackerRank · Skill Certification
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content compact-cert">
+<div class="pdf-mini">
+<span>
+                            PDF
+                        </span>
+<b>
+                            CSS Basic Certificate
+                        </b>
+</div>
+<div class="certificate-info">
+<h3>
+                            CSS Basic
+                        </h3>
+<p>
+                            HackerRank CSS skill certification.
+                        </p>
+<button class="btn btn-dark certificate-open-pdf" data-src="certificates/css-basic.pdf" data-title="CSS Basic" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+<!-- AGILE -->
+<article class="certificate-card">
+<button aria-expanded="false" class="certificate-head" type="button">
+<span class="certificate-name">
+<span class="cert-icon">
+                            08
+                        </span>
+<span>
+<strong>
+                                Agile Requirements Foundations
+                            </strong>
+<small>
+                                LinkedIn Learning / IIBA endorsed
+                            </small>
+</span>
+</span>
+<span class="plus">
+                        +
+                    </span>
+</button>
+<div class="certificate-content">
+<div class="certificate-image-box">
+<img alt="Agile Requirements Foundations certificate" src="certificates/agile-requirements-foundations.jpg"/>
+</div>
+<div class="certificate-info">
+<h3>
+                            Agile Requirements Foundations
+                        </h3>
+<p>
+                            Certificate of completion.
+                        </p>
+<button class="btn btn-dark certificate-open-image" data-src="certificates/agile-requirements-foundations.jpg" data-title="Agile Requirements Foundations" type="button">
+                            View Certificate ↗
+                        </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- =========================================================
+     MY QA DEVELOPMENT
+========================================================= -->
+<section class="section" id="automation">
+<div class="container">
+<div class="section-head">
+<div>
+<span class="eyebrow">QA BECOMES DEVELOPER</span>
+<h2>
+                    Excel + Apps Script Bug Automation
+                </h2>
+</div>
+<p>
+
+                A practical tester-focused automation idea
+                that reduces repeated bug-report work.
+
+            </p>
+</div>
+<div class="automation-grid">
+<!-- VIDEO -->
+<div class="video-card">
+<video controls poster="images/qa-bug-automation-poster.jpg" preload="auto">
+<source src="videos/qa-bug-automation.mp4" type="video/mp4"/>
+
+                    Your browser does not support HTML5 video.
+
+                </video>
+<div class="video-caption">
+<strong>
+                        QA Bug Report Automation — Demo
+                    </strong>
+<span>
+                        Developed by Sopan Panchal
+                    </span>
+</div>
+</div>
+<!-- DESCRIPTION -->
+<div class="automation-copy">
+<span class="eyebrow">
+                    WHY I BUILT IT
+                </span>
+<h3>
+                    Reduce repetitive defect-entry work.
+                </h3>
+<p>
+
+                    I created an Excel test-case sheet
+                    using the Excel Extensions feature,
+                    with Apps Script running JavaScript
+                    logic for the bug-report workflow.
+
+                    The goal is to reduce the time testers
+                    spend checking failed test cases and
+                    manually creating bug records.
+
+                </p>
+<div class="automation-flow">
+<div>
+<b>
+                            01
+                        </b>
+<span>
+
+                            Test case status becomes
+                            <strong>
+                                Failed
+                            </strong>
+</span>
+</div>
+<div>
+<b>
+                            02
+                        </b>
+<span>
+
+                            Apps Script detects the failed case
+
+                        </span>
+</div>
+<div>
+<b>
+                            03
+                        </b>
+<span>
+
+                            Bug record is generated automatically
+
+                        </span>
+</div>
+<div>
+<b>
+                            04
+                        </b>
+<span>
+
+                            After re-testing, the bug reaches
+                            <strong>
+                                Closed
+                            </strong>
+</span>
+</div>
+<div>
+<b>
+                            05
+                        </b>
+<span>
+
+                            Popup confirms closure and the
+                            test case is marked
+                            <strong>
+                                Pass
+                            </strong>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+<section class="section soft" id="contact">
+<div class="container contact-wrap">
+<!-- LEFT SIDE -->
+<div class="contact-intro">
+<span class="eyebrow">
+                CONTACT
+            </span>
+<h2>
+                Let's connect about QA opportunities.
+            </h2>
+<p>
+                Recruiters, hiring managers and teams can
+                contact me directly through email or SMS.
+            </p>
+</div>
+<!-- RIGHT SIDE -->
+<div class="contact-right">
+<div class="contact-details contact-details-icons">
+<div class="contact-item">
+<span aria-hidden="true" class="contact-icon email-icon"><i class="fa-solid fa-envelope"></i></span>
+<div class="contact-item-text">
+<strong>Email</strong>
+<a href="mailto:sopanpanchalcsn@gmail.com">sopanpanchalcsn@gmail.com</a>
+</div>
+</div>
+<div class="contact-item">
+<span aria-hidden="true" class="contact-icon sms-icon"><i class="fa-solid fa-comment-dots"></i></span>
+<div class="contact-item-text">
+<strong>Mobile</strong>
+<a href="tel:+919156519315">+91 9156519315</a>
+</div>
+</div>
+</div>
+<div class="contact-actions">
+<a class="btn btn-dark contact-action-btn"
+   style="transform:translateX(25px);"
+   href="mailto:sopanpanchalcsn@gmail.com?subject=Portfolio%20Enquiry&amp;body=Hello%20Sopan%2C%0A%0AI%20visited%20your%20QA%20Engineer%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0ARegards%2C">
+    📧 Email Me ↗
+</a>
+<a class="btn btn-light contact-action-btn"
+       href="sms:+919156519315?body=Hello%20Sopan%2C%0A%0AI%20visited%20your%20QA%20Engineer%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0AName%3A%20%0AOrganisation%3A%20%0AMessage%3A%20">
+        📱 Send SMS ↗
+    </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-left">
+<span>
+
+            ©
+            <span id="year"></span>
+            Sopan Panchal
+
+        </span>
+<span class="footer-dot"></span>
+<span>
+            QA Engineer Portfolio
+        </span>
+</div>
+<a aria-label="Back to top" class="back-to-top" href="#home">
+    ↑
+       </a>
+</div>
+</footer>
+<!-- =========================================================
+     IMAGE CERTIFICATE MODAL
+========================================================= -->
+<div aria-hidden="true" class="modal" id="imageModal">
+<div class="modal-backdrop" data-close-modal=""></div>
+<div aria-modal="true" class="modal-panel" role="dialog">
+<button aria-label="Close certificate preview" class="modal-close" data-close-modal="" type="button">
+            ×
+        </button>
+<div class="modal-title">
+<span class="eyebrow">
+                CERTIFICATE PREVIEW
+            </span>
+<h2 id="imageModalTitle">
+                Certificate
+            </h2>
+</div>
+<div class="modal-media image-media">
+<img alt="Certificate preview" id="imageModalContent" src=""/>
+</div>
+</div>
+</div>
+<!-- =========================================================
+     PDF CERTIFICATE MODAL
+========================================================= -->
+<div aria-hidden="true" class="modal" id="pdfModal">
+<div class="modal-backdrop" data-close-pdf=""></div>
+<div aria-modal="true" class="modal-panel pdf-panel" role="dialog">
+<button aria-label="Close PDF preview" class="modal-close" data-close-pdf="" type="button">
+            ×
+        </button>
+<div class="modal-title">
+<span class="eyebrow">
+                CERTIFICATE PREVIEW
+            </span>
+<h2 id="pdfModalTitle">
+                Certificate
+            </h2>
+</div>
+<div class="modal-media pdf-media">
+<iframe id="pdfModalFrame" src="" title="Certificate PDF preview"></iframe>
+</div>
+<div class="modal-footer-actions">
+<a class="btn btn-dark" href="#" id="pdfOpenNew" rel="noopener noreferrer" target="_blank">
+                Open in New Tab ↗
+            </a>
+</div>
+</div>
+</div>
+<!-- =========================================================
+     SCRIPT
+========================================================= -->
+<script src="script.js"></script>
+<!-- =====================================================
+     RESUME VIEWER
+     ===================================================== -->
+
+<div id="resume-viewer" class="resume-overlay">
+
+    <div class="resume-panel">
+
+        <!-- Header -->
+        <div class="resume-panel-header">
+
+            <div class="resume-title">
+                <div class="resume-file-icon">
+                    <i class="fa-regular fa-file-lines"></i>
+                </div>
+
+                <div>
+                    <h2>My Resume</h2>
+                    <p>View my latest resume below</p>
+                </div>
+            </div>
+
+            <button
+                type="button"
+                class="resume-close"
+                onclick="closeResumeViewer()"
+                aria-label="Close Resume"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <!-- PDF -->
+        <div class="resume-pdf-wrap">
+
+            <iframe
+                id="resume-pdf"
+                src="resume.pdf#toolbar=1&navpanes=0&scrollbar=1"
+                title="Sopan Panchal Resume"
+            ></iframe>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="resume-panel-footer">
+
+            <a
+                class="resume-download"
+                href="resume.pdf"
+                download="Sopan-Panchal-Resume.pdf"
+            >
+                <i class="fa-solid fa-download"></i>
+                Download Resume
+            </a>
+
+            <button
+                type="button"
+                class="resume-close-bottom"
+                onclick="closeResumeViewer()"
+            >
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
